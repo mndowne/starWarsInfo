@@ -13,7 +13,8 @@ function App() {
     const fetchMovieHandler = useCallback(() =>  {
         setIsLoading(true);
         setError(null);
-        fetch('https://swapi.py4e.com/api/films/').then(response => {
+        //fetch('https://swapi.py4e.com/api/films/').then(response => {
+        fetch('http://localhost:3001/').then(response => {
             if (!response.ok) {
                 throw new Error('Something went wrong!');
             }
